@@ -1,8 +1,6 @@
-package com.learn.github.view;
+package com.learn.github.view.adapter;
 
-import android.text.Layout;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -11,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.learn.github.R;
 import com.learn.github.databinding.ItemBinding;
-import com.learn.github.model.Repo;
 import com.learn.github.viewModel.ReposViewModel;
 
 import java.util.List;

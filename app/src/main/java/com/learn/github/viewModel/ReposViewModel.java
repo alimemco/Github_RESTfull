@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.learn.github.model.Repo;
 import com.learn.github.repository.GithubRepository;
-import com.learn.github.view.ReposAdapter;
+import com.learn.github.view.adapter.ReposAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ public class ReposViewModel extends BaseObservable {
     public ReposViewModel(Context context , String username) {
         this.mContext = context;
         repository = new GithubRepository();
-        repository.getReposListMutableLiveData().observe((LifecycleOwner) mContext, repos -> {
+        repository.getRepositoriesLiveData().observe((LifecycleOwner) mContext, repos -> {
             List<ReposViewModel> list = new ArrayList<>();
             for (int i = 0; i < repos.size(); i++) {
                 list.add(new ReposViewModel(repos.get(i)));
@@ -52,7 +52,7 @@ public class ReposViewModel extends BaseObservable {
             viewModelListMutableLiveData.setValue(list);
 
         });
-        repository.getRepository(username);
+        repository.getRepositories(username);
 
     }
 

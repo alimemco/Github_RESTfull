@@ -1,8 +1,13 @@
 package com.learn.github.model;
 
+import androidx.databinding.Bindable;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+@Entity
 public class User {
 
     @SerializedName("login")
@@ -10,6 +15,7 @@ public class User {
     private String login;
     @SerializedName("id")
     @Expose
+    @PrimaryKey
     private Integer id;
     @SerializedName("node_id")
     @Expose
@@ -59,30 +65,11 @@ public class User {
     @SerializedName("site_admin")
     @Expose
     private Boolean siteAdmin;
-    @SerializedName("name")
-    @Expose
-    private Object name;
-    @SerializedName("company")
-    @Expose
-    private Object company;
+
     @SerializedName("blog")
     @Expose
     private String blog;
-    @SerializedName("location")
-    @Expose
-    private Object location;
-    @SerializedName("email")
-    @Expose
-    private Object email;
-    @SerializedName("hireable")
-    @Expose
-    private Object hireable;
-    @SerializedName("bio")
-    @Expose
-    private Object bio;
-    @SerializedName("twitter_username")
-    @Expose
-    private Object twitterUsername;
+
     @SerializedName("public_repos")
     @Expose
     private Integer publicRepos;
@@ -246,21 +233,6 @@ public class User {
         this.siteAdmin = siteAdmin;
     }
 
-    public Object getName() {
-        return name;
-    }
-
-    public void setName(Object name) {
-        this.name = name;
-    }
-
-    public Object getCompany() {
-        return company;
-    }
-
-    public void setCompany(Object company) {
-        this.company = company;
-    }
 
     public String getBlog() {
         return blog;
@@ -270,45 +242,6 @@ public class User {
         this.blog = blog;
     }
 
-    public Object getLocation() {
-        return location;
-    }
-
-    public void setLocation(Object location) {
-        this.location = location;
-    }
-
-    public Object getEmail() {
-        return email;
-    }
-
-    public void setEmail(Object email) {
-        this.email = email;
-    }
-
-    public Object getHireable() {
-        return hireable;
-    }
-
-    public void setHireable(Object hireable) {
-        this.hireable = hireable;
-    }
-
-    public Object getBio() {
-        return bio;
-    }
-
-    public void setBio(Object bio) {
-        this.bio = bio;
-    }
-
-    public Object getTwitterUsername() {
-        return twitterUsername;
-    }
-
-    public void setTwitterUsername(Object twitterUsername) {
-        this.twitterUsername = twitterUsername;
-    }
 
     public Integer getPublicRepos() {
         return publicRepos;

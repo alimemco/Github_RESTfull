@@ -1,10 +1,11 @@
-package com.learn.github;
+package com.learn.github.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 
+import com.learn.github.R;
 import com.learn.github.databinding.ActivityMainBinding;
 import com.learn.github.viewModel.UserViewModel;
 

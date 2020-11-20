@@ -18,4 +18,8 @@ public interface ApiService {
     Call<List<Repo>> getRepositories(@Path("username") String username);
 
 
+    @GET("users/{username}/followers")
+    Call<List<User>> getFollowers(@Path("username") String username);
+
+
 }
